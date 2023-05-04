@@ -21,16 +21,16 @@ install.packages("GaussSupression")
 source("R/add_funcs.R")
 
 # Kontrollere funksjoner
-add_func('validator', 'validate', keyword = "r kontrollere logisk")
-add_func('confront', 'validate', keyword = "r kontrollere logisk")
-add_func('ThError', 'Kostra', keyword = "r kontrollere fordeling", github = T)
-add_func('Hb', 'Kostra', keyword = "r kontrollere fordeling", github = T)
-add_func('Quartile', 'Kostra', keyword = "r kontrollere fordeling", github = T)
-add_func('OutlierRegressionMicro', 'Kostra', keyword = "r kontrollere innflytelse", github = T)
-add_func('Rank2NumVar', 'Kostra', keyword = "r kontrollere fordeling", github = T)
-add_func("Diff2NumVar", "Kostra", keyword = "r kontrollere fordeling", github = T)
-add_func("AggrSml2NumVar", "Kostra", keyword = "r kontrollere fordeling", github = T)
-add_func("get_extremes", "struktuR", keyword = "r kontrollere innflytelse", github = T)
+add_func('validator', 'validate', keyword = "r kontrollere logisk regelbasert")
+add_func('confront', 'validate', keyword = "r kontrollere logisk regelbasert")
+add_func('ThError', 'Kostra', keyword = "r kontrollere statistisk", github = T)
+add_func('Hb', 'Kostra', keyword = "r kontrollere statistisk", github = T)
+add_func('Quartile', 'Kostra', keyword = "r kontrollere statistisk", github = T)
+add_func('OutlierRegressionMicro', 'Kostra', keyword = "r kontrollere statistisk", github = T)
+add_func('Rank2NumVar', 'Kostra', keyword = "r kontrollere statistisk", github = T)
+add_func("Diff2NumVar", "Kostra", keyword = "r kontrollere statistisk", github = T)
+add_func("AggrSml2NumVar", "Kostra", keyword = "r kontrollere statistisk", github = T)
+add_func("get_extremes", "struktuR", keyword = "r kontrollere statistisk", github = T)
 
 # Imputere
 add_func('impute_proxy', 'simputation', keyword = "r imputere donor")
@@ -38,7 +38,7 @@ add_func('impute_knn', 'simputation', keyword = "r imputere donor")
 add_func('lm', 'stats', keyword = "r imputere analyse modellbasert")
 add_func('impute_pmm', 'simputation', keyword = "r imputere donor")
 add_func('impute_rhd', 'simputation', keyword = "r imputere donor")
-add_func('LmImpute', 'Kostra', keyword = "r imputere modellbasert kontrollere innflytelse")
+add_func('LmImpute', 'Kostra', keyword = "r imputere modellbasert kontrollere statistisk")
 
 # Strukturere
 add_func("HierarchyCompute", "SSBtools", keyword = "r strukturere")
@@ -61,7 +61,8 @@ add_func("SuppressionFromDecimals", "GaussSuppression", keyword = "r konfidensia
 
 # Sesongjustering - missing html for functions in pickmdl. Can't install with Java so use manual
 
-add_func("x13", "RJDemetra", keyword = "r sesongjustering 6.1", url="https://rdrr.io/cran/RJDemetra/man/x13.html",
+add_func("x13", "RJDemetra", keyword = "r sesongjustering 6.1", 
+         url="https://rdrr.io/cran/RJDemetra/man/x13.html",
          name = "Seasonal Adjustment with X13-ARIMA",
          descrip = "Functions to estimate the seasonally adjusted series (sa) with the X13-ARIMA method. This is achieved by decomposing the time series (y) into the trend-cycle (t), the seasonal component (s) and the irregular component (i). The final seasonally adjusted series shall be free of seasonal and calendar-related movements. x13 returns a preformatted result while jx13 returns the Java objects resulting from the seasonal adjustment.")
 add_func("x13_spec", "RJDemetra", keyword = "r sesongjustering 6.1", url = "https://rdrr.io/cran/RJDemetra/man/x13_spec.html",
